@@ -1,0 +1,82 @@
+source "https://rubygems.org"
+ruby "2.4.1"
+
+gem "rails"
+gem "activerecord-import"
+gem "cancancan"
+gem "kaminari"
+gem "parallel"
+gem "unicorn"
+
+# DB
+gem "mysql2"
+# SEO
+gem "meta-tags"
+gem "parallel"
+gem "sitemap-generator"
+
+group :development, :test do
+  # test
+  gem "factory_bot_rails"
+  gem "faker"
+  gem "guard-rspec", require: false
+  gem "rspec"
+  gem "rspec-collection_matchers"
+  gem "rspec-its"
+  gem "rspec-rails"
+  gem "timecop"
+
+  # linter
+  gem "rubocop", require: false
+  gem "rubocop-checkstyle_formatter", require: false
+end
+
+group :development do
+  # debug tools
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "hirb"
+  gem "hirb-unicode"
+  gem "pry-byebug"
+  gem "pry-doc"
+  gem "pry-rails"
+  gem "pry-stack_explorer"
+  gem "quiet_assets"
+  gem "rack-mini-profiler"
+  gem "tapp"
+  gem "view_source_map"
+  gem "web-console"
+  # profiling
+  gem "bullet"
+  gem "derailed_benchmarks"
+  gem "stackprof"
+
+  gem "guard"
+  gem "spring"
+  gem "spring-commands-rspec"
+
+end
+
+group :test do
+  gem "apivore"
+  gem "capybara-webkit"
+  gem "shoulda-matchers"
+  gem "simplecov-json"
+  gem "simplecov-rcov", require: false
+  gem "test-prof", require: false
+end
+
+group :production do
+  # deploy
+  gem "capistrano", "3.8.1"
+  gem "capistrano-bundler"
+  gem "capistrano-rails"
+  gem "capistrano-rvm"
+  gem "capistrano-sidekiq"
+  gem "capistrano3-puma"
+  gem "capistrano3-unicorn"
+  gem "unicorn"
+  gem "unicorn-worker-killer"
+end
+
+
