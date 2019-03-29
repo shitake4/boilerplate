@@ -1,0 +1,135 @@
+AllCops:
+  TargetRubyVersion: 2.4.2
+  Exclude:
+    - bin/**/*
+    - config/**/*
+    - vendor/**/*
+
+# ===============================================
+# Metrics
+Metrics/AbcSize:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+# ===============================================
+# Naming
+Naming/UncommunicativeMethodParamName:
+  AllowNamesEndingInNumbers: false
+  MinNameLength: 1
+
+Naming/AsciiIdentifiers:
+  Exclude:
+    - lib/mailer_previews/**/*
+
+Naming/AsciiIdentifiers:
+  Exclude:
+    - lib/mailer_previews/**/*
+
+# ===============================================
+# Style
+Style/AccessModifierDeclarations:
+  Enabled: false
+
+Style/NumericLiteralPrefix:
+  EnforcedOctalStyle: zero_only
+
+Style/ParenthesesAroundCondition:
+  Enabled: false
+
+Style/RescueStandardError:
+  Enabled: false
+
+Style/TernaryParentheses:
+  EnforcedStyle: require_parentheses_when_complex
+
+Style/YodaCondition:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+# ===============================================
+# Layout
+Layout/AlignHash:
+  Enabled: false
+
+Layout/ExtraSpacing:
+  Enabled: false
+
+Layout/MultilineHashBraceLayout:
+  Enabled: false
+
+Layout/MultilineMethodCallBraceLayout:
+  EnforcedStyle: new_line
+
+Layout/IndentArray:
+  EnforcedStyle: consistent
+
+# ===============================================
+# Metrics
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+# ===============================================
+# Lint
+Lint/Debugger:
+  Exclude:
+    - spec/**/*
+
+Lint/EmptyWhen:
+  Enabled: false
+
+# ===============================================
+# Naming
+Naming/MethodName:
+  Exclude:
+    - lib/mailer_previews/previews/**/*
+
+# ===============================================
+# Performance
+Performance/TimesMap:
+  Enabled: false
+
+# ===============================================
+# Rails
+Rails/Output:
+  Exclude:
+    - lib/**/*
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+Rails/InverseOf:
+  Enabled: false
+Rails/SkipsModelValidations:
+  Enabled: false
+Rails/OutputSafety:
+  Enabled: false
+Rails/FilePath:
+  EnforcedStyle: slashes
